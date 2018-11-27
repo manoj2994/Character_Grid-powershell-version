@@ -30,19 +30,7 @@ $grid = @(('.', '.', '.', '.', '.', '.'),
        
 
 
-       [System.Collections.ArrayList]$a = @(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)
-        $n = New-Object  System.Collections.ArrayList
-       foreach ($i in $a) {
-
-         if($i -le 5){
-
-            $n.Add($i)
-
-         }
-
-
-       }
-
+       
 
 
 
