@@ -1,24 +1,49 @@
-Measure-Command{
 
-Write-Host "Hello welcome" -ForegroundColor Cyan
-$username=read-host "Enter yout name"
-[int]$userage=Read-Host "Enter your age" 
 
-$i=100
+$grid = @(('.', '.', '.', '.', '.', '.'),
+        ('.', 'O', 'O', '.', '.', '.'),
+        ('O', 'O', 'O', 'O', '.', '.'),
+        ('O', 'O', 'O', 'O', 'O', '.'),
+        ('.', 'O', 'O', 'O', 'O', 'O'),
+        ('O', 'O', 'O', 'O', 'O', '.'),
+        ('O', 'O', 'O', 'O', '.', '.'),
+        ('.', 'O', 'O', '.', '.', '.'),
+        ('.', '.', '.', '.', '.', '.'))
 
-$p = $i - $userage
 
-$date=(Get-Date).Year
+       $n = ($grid).Count
+       $m=($grid[0]).Count
 
-$p+=$date
+       foreach ($j in 0..($m-1))
+       {
+            write-host " " 
 
-$v = Write-Output "HI $username you will turn 100 0n the year of  $p " 
- 
-[Int32]$n = Read-Host "Enter the no of times you want to see the message"
+            foreach ($i in 0..($n-1))
+            {
 
- "$v `n"*$n | Out-Default
+               Write-Host $grid[$i][$j] -NoNewline
 
-}
+            }
+
+       }    
+       
+       
+
+
+       [System.Collections.ArrayList]$a = @(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)
+        $n = New-Object  System.Collections.ArrayList
+       foreach ($i in $a) {
+
+         if($i -le 5){
+
+            $n.Add($i)
+
+         }
+
+
+       }
+
+
 
 
 
